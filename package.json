@@ -1,36 +1,40 @@
 {
-  "name": "style-inject",
+  "name": "style-inject-package",
   "version": "0.3.0",
-  "description": "Inject style tag to document head.",
+  "description": "Inject style tag to document head by package.",
   "main": "dist/style-inject.js",
   "module": "dist/style-inject.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo lol",
-    "build": "bili --format umd,es",
+    "build": "bili src/index.ts --format umd,es && tsc",
     "prepublishOnly": "npm run build",
     "lint": "xo"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egoist/style-inject.git"
+    "url": "git+https://github.com/smilexx/style-inject.git"
   },
   "keywords": [
     "style",
     "css",
-    "inject"
+    "inject",
+    "package"
   ],
   "files": [
     "dist"
   ],
-  "author": "EGOIST <0x142857@gmail.com>",
+  "author": "smilexx <smile.nikitoz@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egoist/style-inject/issues"
+    "url": "https://github.com/smilexx/style-inject/issues"
   },
-  "homepage": "https://github.com/egoist/style-inject#readme",
+  "homepage": "https://github.com/smilexx/style-inject#readme",
   "devDependencies": {
+    "@types/node": "^14.14.6",
     "bili": "^2.2.6",
     "eslint-config-rem": "^3.2.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.0.5",
     "xo": "^0.18.2"
   },
   "xo": {
