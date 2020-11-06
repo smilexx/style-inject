@@ -1,5 +1,5 @@
 const styleInjectPath = require
-    .resolve('style-inject-package/dist/style-inject.es')
+    .resolve('style-inject-package/dist/style-inject-package.es')
     .replace(/[\\/]+/g, '/')
 
 const inject = (name: string) => (cssVariableName: string) =>
